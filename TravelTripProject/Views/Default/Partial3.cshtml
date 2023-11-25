@@ -1,0 +1,13 @@
+﻿@model List<TravelTripProject.Models.Sınıflar.Blog>
+<div class="padding">
+    <h4>En Popüler 10 Blog</h4>
+    <ul class="list list-pad">
+        @{ int i = 1;}
+        @foreach (var item in Model)
+        {
+            <li class="list-bg"><span>@i</span><a href="/Blog/BlogDetail/@item.ID">@item.Title</a></li>
+            i++;
+        }
+    </ul>
+    <a href="/Blog/Index/">Tüm Blokları Gör</a>
+</div>

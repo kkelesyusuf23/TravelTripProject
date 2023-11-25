@@ -1,0 +1,88 @@
+﻿@model List<TravelTripProject.Models.Sınıflar.Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+<div class="header-banner">
+    <div class="wrap">
+        <div class="banner">
+            <div class="indent">
+                <h2 class="indent-left margin-bot">Tatil & Seyehat Bloğum</h2>
+                <div class="banner-left">
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/glass.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            <p>Restaurantlar</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/flight.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            <p>Uçuşlar</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/group.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            <p>Yapılacak Şeyler</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="con-text">
+                        <div class="grid1-img">
+                            <img src="~/web/images/key.png" alt="">
+                        </div>
+                        <div class="grid1-desc">
+                            <p>Araba Kiralama</p>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="header_bottom_right_images">
+
+                    <div class="slider" style="width:650px;height:370px">
+                        <ul class="rslides" id="slider1">
+                            @foreach (var item in Model)
+                            {
+                                <li><img src="@item.BlogImage" alt=""></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="wrapper">
+        <div class="con-top">
+            <h3>Tatil Seyehat Bloğuma Hoşgeldiniz!</h3>
+            <p>Bu projeyi 27 Haziran 2023 tarihinde başlatıp 28 Haziran 2023 tarihinde ana sayfa düzenlemelerine getirdik. Gezip gördüğüm yerleri
+            sizlerrle paylaşmak için kodlamasını tamamen kendim yaptığım MVC5 üzerine kurulu dinamik bir web projesi geliştirdik.
+            Hem Türkiye'den hemde yurt dışından gezip gördüğüm yereleri blog yazıları olarak sizlerle paylaşma niyetindeyim. 
+            Umuyorum ki yazdıklarımı beğenirsiniz, keyifli okumalar, sağlıklı günler.</p>
+        </div>
+        @Html.Action("Partial1","Default")
+        <div class="grids">
+            <div class="box1">
+                @Html.Action("Partial3","Default")
+                @Html.Action("Partial4","Default")
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>

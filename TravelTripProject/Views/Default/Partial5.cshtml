@@ -1,0 +1,14 @@
+﻿@model List<TravelTripProject.Models.Sınıflar.Blog>
+
+<div class="box1-left">
+    @foreach (var item in Model)
+    {
+        <div class="bot-img">
+            <img src="@item.BlogImage" style="width:120px; height:65px" alt="" />
+        </div>
+        <div class="bot-desc1">
+            <p>@item.Description.Substring(0,70)...</p>
+        </div>
+        <div class="clear"></div>
+    }
+</div>
